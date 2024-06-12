@@ -1,23 +1,15 @@
+#Tabla de Multiplicar: Escribe un programa que muestre la tabla de multiplicar de un número dado por el usuario.
 
-def invertir_caracteres(cadena_de_caracteres):
-    if len(cadena_de_caracteres) == 0:
-        print("")
-        return " "
-    else:
-        return cadena_de_caracteres[-1] + invertir_caracteres(cadena_de_caracteres[:-1])
-    
+#Se define 'n' como el numero que definira la tabla de multiplicar que desea ver el usuario
+n = int(input("La tabla de que numero desea visualizar? "))
 
-#Se pide al usuario que ingrese la palabra a invertir
+#Se inicializa las variables
+resultado = 0 
+i= 1 #Se define a i como contador
 
-palabra = input('Ingrese la palabra que desea invertir: ')
-
-#Se envia la palabra a la funcion para invertirla y el retorno se guarda en la variable resultado
-resultado = invertir_caracteres(palabra)
-
-
-if len(palabra) > 0:
-#Se muestra en pantalla la palabra invertida
-    print("La palabra invertida es: ", resultado)
-else: 
-    #En caso de haber dejado el campo vacio se le informa al usuario que no ha ingresado nada
-    print ("No ha ingresado ninguna palabra")
+#Bucle que realiza e imprime la tabla
+print('La tabla del ',n ,': ')
+while i<=10:
+    resultado = (n*i)
+    print(n,' x ',i,': ',resultado) 
+    i = i+1
